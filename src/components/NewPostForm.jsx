@@ -22,6 +22,8 @@ class NewPostForm extends React.Component {
       timestamp: new Date().toLocaleTimeString(),
       points: 0,
     }
+    _author.value = '';
+    _content.value = '';
     dispatch(action);
   }
 
