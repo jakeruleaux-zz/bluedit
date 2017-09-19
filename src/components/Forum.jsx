@@ -1,15 +1,29 @@
 import React from 'react';
 import NewPostForm from './NewPostForm';
 import PostList from './PostList';
+import { connect } from 'react-redux';
 
-function Forum() {
+class Forum extends React.Component {
 
-  return(
-    <div>
-      <NewPostForm />
-      <PostList />
-    </div>
-  )
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+   return(
+      <div>
+        <NewPostForm />
+        <PostList
+          postList = {this.props.masterPostList}/>
+      </div>
+    );
+  }
 }
 
-export default Forum;
+const mapStateToProps = state => {
+  return {
+    masterPostList : state
+  }
+}
+
+export default connect(mapStateToProps)(Forum);
