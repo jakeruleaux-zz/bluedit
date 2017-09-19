@@ -9,6 +9,8 @@ function PostList(props) {
       <Post author={post.author}
         content={post.content}
         timestamp={post.timestamp}
+        points={post.points}
+        post={post}
         key={post.id}/>
       )}
     </div>

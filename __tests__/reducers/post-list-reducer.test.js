@@ -29,4 +29,22 @@ describe('Post list reducer', () => {
     const futureState = [ postInfo ];
     expect(postList([], action)).toEqual(futureState);
   });
+
+
+  test('should add points to post', () => {
+    const { author, content, timestamp, points, id } = postInfo;
+    action = {
+      type: c.LIKE_POST,
+      id: id
+    }
+    const stateAfter = {
+      author: 'Jake',
+      content: 'Mad wack hella-tight stuff goin\' on on Alberta tonight.',
+      timestamp: '11:45:23 AM',
+      points: 1,
+      id: action.id,
+    }
+    expect(postList([ postInfo ], action)).toEqual([ stateAfter ]);
+  });
+
 });
