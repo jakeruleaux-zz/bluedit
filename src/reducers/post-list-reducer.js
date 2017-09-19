@@ -15,7 +15,7 @@ export default (state = [], action) => {
       return newState;
 
     case 'LIKE_POST':
-      let tempState = state;
+      let tempState = state.slice();
       for (var i = 0; i < tempState.length; i++) {
         if (tempState[i].id === action.id) {
           tempState[i].points++;

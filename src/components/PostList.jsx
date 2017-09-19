@@ -3,6 +3,8 @@ import Post from './Post';
 import PropTypes from 'prop-types';
 
 function PostList(props) {
+  console.log(props.postList);
+
   return(
     <div>
       {props.postList.map((post) =>
@@ -11,6 +13,7 @@ function PostList(props) {
         timestamp={post.timestamp}
         points={post.points}
         post={post}
+        postList={props.postList}
         key={post.id}/>
       )}
     </div>
