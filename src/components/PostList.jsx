@@ -13,7 +13,6 @@ function PostList(props) {
         timestamp={post.timestamp}
         points={post.points}
         post={post}
-        postList={props.postList}
         key={post.id}/>
       )}
     </div>
