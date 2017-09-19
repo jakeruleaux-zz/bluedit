@@ -3,14 +3,18 @@ import ReactDOM from 'react-dom';
 import App from './components/App';
 
 import { createStore } from 'redux';
-// import reducer from './reducers/'
+import reducer from './reducers/post-list-reducer';
 import { Provider } from 'react-redux';
 
 const store = createStore(reducer);
 
+let unsubscribe = store.subscribe(() =>
+  console.log(store.getState())
+)
+
 const render = (Component) => {
   ReactDOM.render(
-    <Provider store={Store}>
+    <Provider store={store}>
       <Component/>
     </Provider>,
     document.getElementById('react-app-root')

@@ -4,10 +4,12 @@ import PostList from './PostList';
 
 function Forum() {
 
-  return{
-    <NewPostForm />
-    <PostList />
-  }
+  return(
+    <div>
+      <NewPostForm />
+      <PostList />
+    </div>
+  )
 }
 
 export default Forum;
