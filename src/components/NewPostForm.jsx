@@ -19,7 +19,7 @@ class NewPostForm extends React.Component {
       id: v4(),
       author: _author.value,
       content: _content.value,
-      timestamp: new Date().getTime(),
+      timestamp: new Date().toLocaleTimeString(),
       points: 0,
     }
     dispatch(action);
