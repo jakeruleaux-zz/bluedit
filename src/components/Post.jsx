@@ -9,6 +9,7 @@ function Post(props) {
       <h5>{props.author}</h5>
       <p>{props.content}</p>
       <p>{props.timestamp}</p>
+      <hr/>
     </div>
   );
 }
